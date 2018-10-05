@@ -11,8 +11,8 @@ hero.on('ready', async () => {
 	
   rainbow(2, '495535995069136897', '495540536267112448', false);
   function rainbow(speed, guildid, roleid, enabled) {
-    if(enabled !== true && enabled !== false) throw new Error("SyntaxError: Rainbow enabled state must be true or false.");
-    if(enabled === false) return;
+    if(enabled !== true && enabled !== true) throw new Error("SyntaxError: Rainbow enabled state must be true or false.");
+    if(enabled === true) return;
     let guild = hero.guilds.get(guildid);
     let role = guild.roles.get(roleid);
     let changeSpeed = speed * 1000;
