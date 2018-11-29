@@ -20,12 +20,33 @@ client.on('ready', () => {
           client.user.setActivity("#js",{type: 'STREAMING'});     //Heeeeeemo Heeeeeeeeeemo   
 });
 
+client.on('message', async message => {
+  if (message.content.startsWith('-help'))
+
+  var embed = new Discord.RichEmbed()
+
+  .setColor('RANDOM')
+  .addField(`-js`,`Publish a JavaScript Code (Must be Support)`,true)
+  .addField(`-html`,`Publish a HTML Code (Must be Support)`,true)
+  .addField(`-python`,`Publish a Python Code (Soon)`,true)
+  .addField(`-eris`,`Publish an Eris Code (Soon)`,true)
+  .addField(`-تقديم`,`تقديم على رتبة سبورت (Must Not be Support)`,true)
+  .addField(`-قبول`,`قبول شخص على تقديمه (Admininstrator Only)`,true)
+  .addField(`-رفض`,`رفض شخص على تقديمه (Administrator Only)`,true)
+  .setTimestamp()
+  message.channel.send(embed)
+  await msg.react(':white_check_mark: ')
+  await msg.react(':x: ')
+
+
+});  
+
 hero.on('ready', async () => {
 	console.log(`Client is ready.`);
 	console.log();
 	console.log(`Logged in ${hero.user.tag}`);
   hero.generateInvite(['ADMINISTRATOR']).then(link => console.log(link));
-  hero.user.setActivity('-help', {type: 1, url: "https://twitch.tv/6xlez1"});
+  hero.user.setActivity('-help', {type: 1, url: "https://twitch.tv/Ninja"});
 	
   rainbow(2, '495535995069136897', '495540536267112448', false);
   function rainbow(speed, guildid, roleid, enabled) {
