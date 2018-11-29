@@ -331,7 +331,7 @@ hero.on('message',async message => {
     }).catch();
   }
 });
-*/
+
 
 hero.on('ready', async() => {
 var server = "407520421777244160"; // ايدي السررفر
