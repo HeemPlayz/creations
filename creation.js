@@ -34,10 +34,8 @@ client.on('message', async message => {
   .addField(`-قبول`,`قبول شخص على تقديمه (Admininstrator Only)`,true)
   .addField(`-رفض`,`رفض شخص على تقديمه (Administrator Only)`,true)
   .setTimestamp()
+  
   message.channel.send(embed)
-  await msg.react(':white_check_mark: ')
-  await msg.react(':x: ')
-
 
 });  
 
