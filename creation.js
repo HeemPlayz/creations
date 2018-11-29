@@ -191,7 +191,7 @@ hero.on('message',async message => {
               
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('510504590416936978');
-              let m = await c.send(`@everyone | @here\n **جميع الحقوق محفوظة لدى سيرفر سوبريم كودز** \n\`\`\`js\n${code}\`\`\`\n**${message.guild.emojis.find(r => r.name === 'terminal')} » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
+              let m = await c.send(`@everyone | @here\n **جميع الحقوق محفوظة لدى سيرفر سوبريم كودز** \n\`\`\`js\n${code}\`\`\`\n**${message.guild.emojis.find(r => r.name === 'outage')} » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'outage')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'outage')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
@@ -237,7 +237,7 @@ hero.on('message',async message => {
               
               message.channel.send('- **تم نشر الكود**');
               let c = message.guild.channels.get('512516672561610757');
-              let m = await c.send(`@everyone | @here\n **جميع الحقوق محفوظة لدى سيرفر سوبريم كودز** \n\`\`\`html\n${code}\`\`\`\n**${message.guild.emojis.find(r => r.name === 'terminal')} » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'coding')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'creator')} » صاحب الكود :** ${creator}`)
+              let m = await c.send(`@everyone | @here\n **جميع الحقوق محفوظة لدى سيرفر سوبريم كودز** \n\`\`\`html\n${code}\`\`\`\n**${message.guild.emojis.find(r => r.name === 'outage')} » وصف الكود :**\n${desc.replace('**', '')}\n\n**${message.guild.emojis.find(r => r.name === 'outage')} » تم النشر بواسطة :** ${message.author}\n**${message.guild.emojis.find(r => r.name === 'outage')} » صاحب الكود :** ${creator}`)
               await m.react(message.guild.emojis.find(r => r.name === 'greenTick'));
 	      await m.react(message.guild.emojis.find(r => r.name === 'redTick'));
 	      });
