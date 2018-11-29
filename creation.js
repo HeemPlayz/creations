@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const prefix = "-";
+const prefix = "!";
 const hero = new Discord.Client({maxMessagesCache: 1});
 const client = new Discord.Client();
 
@@ -21,7 +21,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async message => {
-  if (message.content.startsWith('-help'))
+  if (message.content.startsWith('!help'))
 
   var embed = new Discord.RichEmbed()
 
@@ -46,7 +46,7 @@ hero.on('ready', async () => {
 	console.log();
 	console.log(`Logged in ${hero.user.tag}`);
   hero.generateInvite(['ADMINISTRATOR']).then(link => console.log(link));
-  hero.user.setActivity('-help', {type: 1, url: "https://twitch.tv/Ninja"});
+  hero.user.setActivity('!help', {type: 1, url: "https://twitch.tv/Ninja"});
 	
   rainbow(2, '495535995069136897', '495540536267112448', false);
   function rainbow(speed, guildid, roleid, enabled) {
