@@ -162,7 +162,8 @@ hero.on('message',async message => {
 		c.send(`**» العضو :** ${mention}\n[ ${message.guild.emojis.find(r => r.name === 'redTick')} ] :: لقد تم رفض العضو`);
 	} else if(args[0] === `${prefix}js`) {
     try {
-      if(!message.member.roles.has('517580710161416207')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
+      let rank = message.guild.member(message.author).roles.find('name', '• Supreme » Support');
+  if (!rank) return message.channel.send('🛑 **| لإستخدام الأمر Supreme >> Support يجب ان تمتلك رتبة**');
       let m = await message.channel.send('- **ارسل الكود الان**');
       let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
         let collected = c.first();
@@ -206,7 +207,9 @@ hero.on('message',async message => {
     }
   } else if(args[0] === `${prefix}html`) {
     try {
-      if(!message.member.roles.has('517580710161416207')) return message.channel.send('- **أنت ليس لديك رتبة السبورت**');
+      let rank = message.guild.member(message.author).roles.find('name', '• Supreme » Support');
+
+  if (!rank) return message.channel.send('🛑 **| لإستخدام الأمر Supreme >> Support يجب ان تمتلك رتبة**');
       let m = await message.channel.send('- **ارسل الكود الان**');
       let awaited = await message.channel.awaitMessages(r => r.author.id === author.id, {max: 1, time: 25000, errors:['time']}).then(async c => {
         let collected = c.first();
